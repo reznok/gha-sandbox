@@ -5,6 +5,8 @@ on:
 
 jobs:
   hello:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
