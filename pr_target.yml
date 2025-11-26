@@ -1,0 +1,10 @@
+name: PR Target
+
+on:
+  pull_request:
+
+jobs:
+  pr_target:
+    runs-on: ubuntu-latest
+    steps:
+      - run echo "Processing PR: ${{ github.event.pull_request.title }}" 
