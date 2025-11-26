@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
-        run: curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/owner/repo/actions/secrets
+        run: 'curl -H "Authorization: token \$GITHUB_TOKEN" https://api.github.com/repos/owner/repo/actions/secrets'
+        
