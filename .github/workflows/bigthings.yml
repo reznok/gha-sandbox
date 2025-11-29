@@ -32,3 +32,12 @@ jobs:
         id: get-test-path
         run: |
           echo "test_path=$(echo ${{ github.event.comment.body }} | grep -oP 'path:\s*\K[^ ]+')" >> $GITHUB_OUTPUT
+
+      - name: if test path is empty, exit
+        if: steps.get-test-path.outputs.test_path == ''
+        run: exit 0
+
+      - name: Run the test
+        run: |
+          echo "Doin the thing..."
+          echo "Test path: ${{ steps.get-test-path.outputs.test_path }}"
