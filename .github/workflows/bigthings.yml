@@ -13,7 +13,7 @@ jobs:
     if: >
       contains(github.event.comment.html_url, '/pull/') &&
       contains(github.event.comment.body, '@reznok-bot update gpu snapshot') &&
-      github.repository == 'nf-core/modules'
+      github.repository == 'reznok/gha-sandbox'
     runs-on: ubuntu-latest
     steps:
       # indication that the snapshot is being updated
